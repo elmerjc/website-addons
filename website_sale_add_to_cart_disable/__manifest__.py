@@ -1,12 +1,11 @@
-# -*- coding: utf-8 -*-
 {
     "name": """Hide "Add To Cart" button from product page""",
     "summary": """Allows to disable product sales via eCommerce for any reason""",
     "category": "eCommerce",
     "images": [],
-    "version": "1.0.0",
+    "version": "11.0.1.0.0",
 
-    "author": "IT-Projects LLC, Ivan Yelizariev",
+    "author": "IT-Projects LLC, Ivan Yelizariev, Nicolas JEUDY",
     "support": "apps@it-projects.info",
     "website": "https://it-projects.info",
     "license": "LGPL-3",
@@ -18,8 +17,8 @@
     ],
     "external_dependencies": {"python": [], "bin": []},
     "data": [
-        "views.xml",
-        "templates.xml",
+        "views/product_template_views.xml",
+        "views/templates.xml",
     ],
     "qweb": [
     ],
@@ -29,6 +28,5 @@
     "post_load": None,
     "pre_init_hook": None,
     "post_init_hook": None,
-    "installable": False,
-    "auto_install": False,
+    "installable": True,
 }

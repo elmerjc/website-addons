@@ -22,6 +22,7 @@ Credits
 Contributors
 ------------
 * Ivan Yelizariev <yelizariev@it-projects.info>
+* Nicolas JEUDY <https://github.com/njeudy>
 
 Sponsors
 --------

@@ -1,12 +1,11 @@
-# -*- coding: utf-8 -*-
 {
     "name": """SEO URLs in eCommerce""",
     "summary": """Customisable URLs for product pages, that don't depend on product name and product ID""",
     "category": "eCommerce",
     "images": [],
-    "version": "1.0.0",
+    "version": "11.0.1.0.0",
 
-    "author": "IT-Projects LLC, Ivan Yelizariev",
+    "author": "IT-Projects LLC, Ivan Yelizariev, Nicolas JEUDY",
     "support": "apps@it-projects.info",
     "website": "https://it-projects.info",
     "license": "LGPL-3",
@@ -19,7 +18,7 @@
     ],
     "external_dependencies": {"python": [], "bin": []},
     "data": [
-        "views.xml",
+        "views/product_template_views.xml",
     ],
     "qweb": [
     ],
@@ -29,6 +28,5 @@
     "post_load": None,
     "pre_init_hook": None,
     "post_init_hook": None,
-    "installable": False,
-    "auto_install": False,
+    "installable": True,
 }
