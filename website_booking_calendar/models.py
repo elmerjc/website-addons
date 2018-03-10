@@ -77,15 +77,15 @@ class SaleOrderLine(models.Model):
                                 'start_f': bookings[r][hour]['start_f']
                             })
                         if adjacent:
-                            for id, p in bookings[r][h]['products'].items():
+                            for id, p in list(bookings[r][h]['products'].items()):
                                 bookings[r][h]['products'][id]['quantity'] += bookings[r][hour]['products'][id]['quantity']
                             del bookings[r][hour]
                             break
                 hour_dt += timedelta(hours=MIN_TIMESLOT_HOURS)
         # calculate prices according to pricelists
-        for k1, v1 in bookings.items():
-            for k2, v2 in v1.items():
-                for id, product in v2['products'].items():
+        for k1, v1 in list(bookings.items()):
+            for k2, v2 in list(v1.items()):
+                for id, product in list(v2['products'].items()):
                     bookings[k1][k2]['products'][id]['price'] = self.env['product.product'].browse(product['id']).with_context({
                         'quantity': product['quantity'],
                         'pricelist': pricelist_id,

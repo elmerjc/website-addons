@@ -27,9 +27,9 @@ class MailTemplate(models.Model):
             multi_mode = False
             res_ids = [res_ids]
 
-        results = dict.fromkeys(res_ids, u"")
+        results = dict.fromkeys(res_ids, "")
 
-        records = self.env[model].browse(filter(None, res_ids))  # filter to avoid browsing [None]
+        records = self.env[model].browse([_f for _f in res_ids if _f])  # filter to avoid browsing [None]
         for r in records:
             if hasattr(r, 'company_id'):
                 company_id = r.company_id.id
